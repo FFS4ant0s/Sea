@@ -22,7 +22,7 @@ Sistema backend desenvolvido em Java com Spring Boot para o gerenciamento de cli
 
 2. **Clone o repositório**
    ```bash
-   git clone https://github.com/seuusuario/clientmanager_Back.git
+   git clone git clone https://github.com/FFS4ant0s/Sea_Projeto.git
    cd clientmanager_Back
 Execute a aplicação
 
@@ -36,9 +36,9 @@ Swagger: http://localhost:8080/swagger-ui/
 🔐 Autenticação
 A aplicação está protegida por autenticação via HTTP Basic.
 
-Usuário: admin
+Usuário: admin / user
 
-Senha: 123qwe!@#
+Senha: 123qwe!@# / 123qwe123
 
 📋 Endpoints principais
 Método	Endpoint	Descrição
