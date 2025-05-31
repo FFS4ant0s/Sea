@@ -22,7 +22,7 @@ Sistema backend desenvolvido em Java com Spring Boot para o gerenciamento de cli
 
 2. **Clone o repositório**
    ```bash
-   git clone git clone https://github.com/FFS4ant0s/Sea_Projeto.git
+   git clone https://github.com/FFS4ant0s/Sea_Projeto.git
    cd clientmanager_Back
 Execute a aplicação
 
