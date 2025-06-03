@@ -35,7 +35,7 @@ Sistema completo para gerenciamento de clientes, com backend em Java Spring Boot
 2. Clone o repositório e acesse a pasta do backend:
    ```bash
    git clone https://github.com/FFS4ant0s/Sea_Projeto.git
-   cd clientmanager_Back
+   cd Sea_Projeto/clientmanager_Back
 Execute a aplicação:
 
 mvn spring-boot:run
