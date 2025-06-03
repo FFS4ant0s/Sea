@@ -22,3 +22,7 @@ export function isAdmin(): boolean {
 export function getToken(): string | null {
   return localStorage.getItem('basicAuth'); 
 }
+
+export function isAuthenticated(): boolean {
+  return !!localStorage.getItem('basicAuth');
+}

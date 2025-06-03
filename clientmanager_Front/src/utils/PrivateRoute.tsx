@@ -1,15 +1,13 @@
 import React, { ReactNode } from 'react';
 import { Navigate } from 'react-router-dom';
+import { isAuthenticated } from '../utils/auth';
 
 interface Props {
   children: ReactNode;
 }
 
 const PrivateRoute = ({ children }: Props) => {
-  const user = localStorage.getItem('user');
-  const pass = localStorage.getItem('pass');
-
-  if (!user || !pass) {
+  if (!isAuthenticated()) {
     return <Navigate to="/" replace />;
   }
 

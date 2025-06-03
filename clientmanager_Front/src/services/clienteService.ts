@@ -1,21 +1,25 @@
 import axios from "axios";
 
-// Defina a URL base da sua API
+// URL base da API
 const API_URL = "http://localhost:8080/clientes";
 
-// Tipo Cliente
+// Tipos
 export interface Cliente {
   id?: number;
   nome: string;
   cpf: string;
+  endereco: Endereco;
+  telefones: Telefone[];
+  emails: string[];
+}
+export interface Endereco {
   cep: string;
   logradouro: string;
+  numero: string;
   complemento?: string;
   bairro: string;
   cidade: string;
-  uf: string;
-  telefones: Telefone[];
-  emails: Email[];
+  estado: string;
 }
 
 export interface Telefone {
@@ -25,52 +29,54 @@ export interface Telefone {
 }
 
 export interface Email {
-  id?: number;
   email: string;
 }
 
+// Listar todos os clientes
 export const listarClientes = async (token: string): Promise<Cliente[]> => {
   const response = await axios.get<Cliente[]>(API_URL, {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Basic ${token}`,
     },
   });
   return response.data;
 };
 
-// Função para buscar um cliente pelo ID
+// Buscar cliente por ID
 export const buscarClientePorId = async (id: number, token: string): Promise<Cliente> => {
   const response = await axios.get<Cliente>(`${API_URL}/${id}`, {
-    headers: { Authorization: `Bearer ${token}` },
+    headers: {
+      Authorization: `Basic ${token}`,
+    },
   });
   return response.data;
 };
 
-// Função para criar um novo cliente
+// Criar novo cliente
 export const criarCliente = async (cliente: Cliente, token: string) => {
   const response = await axios.post(API_URL, cliente, {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Basic ${token}`,
     },
   });
   return response.data;
 };
 
-// Função para atualizar um cliente
+// Atualizar cliente existente
 export const atualizarCliente = async (id: number, cliente: Cliente, token: string) => {
   const response = await axios.put(`${API_URL}/${id}`, cliente, {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Basic ${token}`,
     },
   });
   return response.data;
 };
 
-// Função para deletar um cliente
+// Deletar cliente
 export const deletarCliente = async (id: number, token: string) => {
   const response = await axios.delete(`${API_URL}/${id}`, {
     headers: {
-      Authorization: `Bearer ${token}`,
+      Authorization: `Basic ${token}`,
     },
   });
   return response.data;

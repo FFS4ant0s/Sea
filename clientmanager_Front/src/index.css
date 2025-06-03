@@ -1,5 +1,167 @@
-/* index.css */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e3f2fd;
+  color: #102a43;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #003049;
+}
+
+.cliente-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.cliente-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cliente-info {
+  flex: 1 1 65%;
+}
+
+.cliente-info p {
+  margin: 0.3rem 0;
+  line-height: 1.4;
+}
+
+.cliente-acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.cliente-acoes button {
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #0077b6;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cliente-acoes button:hover {
+  background-color: #023e8a;
+}
+
+.cliente-acoes a button {
+  background-color: #48cae4;
+}
+
+.cliente-acoes a button:hover {
+  background-color: #00b4d8;
+}
+
+div > a > button {
+  display: block;
+  margin: 1.5rem auto;
+  background-color: #023e8a;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+div > a > button:hover {
+  background-color: #0077b6;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  text-decoration: none; /* Garante que o botão em si não tenha sublinhado */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e6f4fa;
+  color: #002b45;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  color: #002b45;
+}
+
+form {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form h4 {
+  margin-top: 30px;
+  color: #002b45;
+}
+
+form div {
+  margin-bottom: 12px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+button[type="submit"] {
+  background-color: #0077cc;
+  margin-top: 20px;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #005fa3;
 }
