@@ -38,10 +38,8 @@ Sistema completo para gerenciamento de clientes, com backend em Java Spring Boot
    cd clientmanager_Back
 Execute a aplicação:
 
-bash
-Copiar
-Editar
 mvn spring-boot:run
+
 Acesse no navegador:
 
 API: http://localhost:8080/clientes
@@ -63,38 +61,29 @@ npm ou yarn
 
 Instale as dependências:
 
-bash
-Copiar
-Editar
 npm install
 # ou
 yarn install
+
 Execute em modo desenvolvimento:
 
-bash
-Copiar
-Editar
 npm run dev
 # ou
 yarn dev
+
 O frontend estará disponível em:
+
 http://localhost:5173
 
 Para gerar o build de produção:
 
-bash
-Copiar
-Editar
-npm run build
-# ou
-yarn build
-📋 Endpoints Principais (Backend)
+📋 Endpoints Principais (Backend)(admin)
 Método	Endpoint	Descrição
-GET	/clientes	Lista todos os clientes
-GET	/clientes/{id}	Busca cliente por ID
-POST	/clientes	Cria novo cliente
-PUT	/clientes/{id}	Atualiza cliente existente
-DELETE	/clientes/{id}	Deleta cliente por ID
+GET	/clientes	Lista todos os clientes (user/admin)
+GET	/clientes/{id}	Busca cliente por ID  (user/admin)
+POST	/clientes	Cria novo cliente (admin)
+PUT	/clientes/{id}	Atualiza cliente existente (admin)
+DELETE	/clientes/{id}	Deleta cliente por ID (admin)
 
 ✅ Testes
 Os testes de integração estão localizados em:
@@ -102,10 +91,8 @@ src/test/java/com/sea/backend/clientmanager/controller/ClienteControllerIntegrat
 
 Para executar os testes:
 
-bash
-Copiar
-Editar
 mvn test
+
 ⚙️ Configurações Adicionais
 Banco de dados H2 está configurado em modo memória (in-memory).
 
@@ -113,4 +100,4 @@ Todas as requisições são protegidas por autenticação HTTP Basic.
 
 Tratamento global de erros via @ControllerAdvice.
 
-CSS do frontend está em arquivos .css dentro da pasta src (ex: index.css).
+CSS do frontend está em arquivo .css dentro da pasta src
