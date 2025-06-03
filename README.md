@@ -52,30 +52,30 @@ Usuário: admin / user
 
 Senha: 123qwe!@# / 123qwe123
 
-Frontend
+
+### Frontend
 Pré-requisitos:
 
 Node.js 16+
 
 npm ou yarn
 
+
 Instale as dependências:
 
 npm install
-# ou
+ ou
 yarn install
 
 Execute em modo desenvolvimento:
 
 npm run dev
-# ou
+ ou
 yarn dev
 
 O frontend estará disponível em:
 
 http://localhost:5173
-
-Para gerar o build de produção:
 
 📋 Endpoints Principais (Backend)(admin)
 Método	Endpoint	Descrição
