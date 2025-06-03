@@ -1,46 +1,94 @@
-# ClientManager API
+# ClientManager
 
-Sistema backend desenvolvido em Java com Spring Boot para o gerenciamento de clientes, incluindo cadastro de endereço, telefone e e-mail.
+Sistema completo para gerenciamento de clientes, com backend em Java Spring Boot e frontend em React + Vite.
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
+### Backend
 - Java 8
 - Spring Boot 2.7.18
 - Spring Data JPA
-- Spring Security (básico com autenticação HTTP Basic)
+- Spring Security (autenticação HTTP Basic)
 - Bean Validation (JSR 380)
-- H2 Database (para ambiente de desenvolvimento/teste)
+- H2 Database (ambiente dev/teste)
 - Swagger 3.0 (Springfox)
 - JUnit 5 + Spring Test (MockMvc)
 
+### Frontend
+- React 18+
+- Vite (ferramenta de build)
+- CSS moderno para estilização
+
+---
+
 ## 📦 Como Executar o Projeto
 
-1. **Pré-requisitos**
+### Backend
+
+1. Pré-requisitos:
    - JDK 8
    - Maven 3.6+
    - Git (opcional)
 
-2. **Clone o repositório**
+2. Clone o repositório e acesse a pasta do backend:
    ```bash
    git clone https://github.com/FFS4ant0s/Sea_Projeto.git
    cd clientmanager_Back
-Execute a aplicação
+Execute a aplicação:
 
+bash
+Copiar
+Editar
 mvn spring-boot:run
-Acesse no navegador
+Acesse no navegador:
 
 API: http://localhost:8080/clientes
 
 Swagger: http://localhost:8080/swagger-ui/
 
-🔐 Autenticação
-A aplicação está protegida por autenticação via HTTP Basic.
+Autenticação:
 
 Usuário: admin / user
 
 Senha: 123qwe!@# / 123qwe123
 
-📋 Endpoints principais
+Frontend
+Pré-requisitos:
+
+Node.js 16+
+
+npm ou yarn
+
+Instale as dependências:
+
+bash
+Copiar
+Editar
+npm install
+# ou
+yarn install
+Execute em modo desenvolvimento:
+
+bash
+Copiar
+Editar
+npm run dev
+# ou
+yarn dev
+O frontend estará disponível em:
+http://localhost:5173
+
+Para gerar o build de produção:
+
+bash
+Copiar
+Editar
+npm run build
+# ou
+yarn build
+📋 Endpoints Principais (Backend)
 Método	Endpoint	Descrição
 GET	/clientes	Lista todos os clientes
 GET	/clientes/{id}	Busca cliente por ID
@@ -52,12 +100,17 @@ DELETE	/clientes/{id}	Deleta cliente por ID
 Os testes de integração estão localizados em:
 src/test/java/com/sea/backend/clientmanager/controller/ClienteControllerIntegrationTest.java
 
-Execute os testes com:
+Para executar os testes:
+
+bash
+Copiar
+Editar
 mvn test
+⚙️ Configurações Adicionais
+Banco de dados H2 está configurado em modo memória (in-memory).
 
-⚙️ Configurações adicionais
-O banco de dados H2 está configurado no modo memória (in-memory).
+Todas as requisições são protegidas por autenticação HTTP Basic.
 
-Todas as requisições devem ser autenticadas.
+Tratamento global de erros via @ControllerAdvice.
 
-O tratamento global de erros está implementado via @ControllerAdvice.
+CSS do frontend está em arquivos .css dentro da pasta src (ex: index.css).
